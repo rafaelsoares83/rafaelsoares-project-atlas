@@ -4,6 +4,8 @@ export const portfolio = {
   githubUser: "rafaelsoares83",
   linkedin: "https://www.linkedin.com/in/rafael-doyle-soares-5481b0124",
   role: "Product Owner",
+  // Repository shown in the "Código deste portfólio" section (details come from the GitHub connection).
+  featuredRepo: "rafaelsoares-project-atlas",
   // Used when the GitHub profile has no bio.
   tagline:
     "Product Owner com 12 anos de experiência conectando negócio e tecnologia — de sistemas SAP e ERP a produtos digitais, integrações e iniciativas de transformação.",

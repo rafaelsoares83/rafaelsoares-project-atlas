@@ -4,6 +4,7 @@ import { useMemo } from "react";
 
 import { FeaturedProjects } from "@/components/portfolio/FeaturedProjects";
 import { ProfileHeader } from "@/components/portfolio/ProfileHeader";
+import { SourceRepo } from "@/components/portfolio/SourceRepo";
 import { ProjectsSection } from "@/components/portfolio/ProjectsSection";
 import { portfolio } from "@/config/portfolio";
 import { caseStudies } from "@/content/projects";
@@ -54,6 +55,7 @@ function Index() {
         error={(reposQ.error as Error | null) ?? null}
         onRetry={() => void reposQ.refetch()}
       />
+      <SourceRepo />
       <footer className="border-t border-border">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 px-6 py-8 text-sm text-muted-foreground md:flex-row md:justify-between">
           <span>© {new Date().getFullYear()} {portfolio.name}</span>

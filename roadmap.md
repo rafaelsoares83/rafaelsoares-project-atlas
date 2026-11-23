@@ -8,3 +8,4 @@
 - [x] Estudo de caso CWI Software (Automação e Integração com TOTVS Protheus)
 - [ ] Publicar o portfólio no ar (para recrutadores) — publicação cancelada pelo usuário; refazer quando ele pedir
 - [ ] Colocar o projeto no GitHub (Git sync) — feito pelo usuário em Project settings → Git
+- [x] Seção 'Código deste portfólio' com dados do repositório via conexão GitHub
