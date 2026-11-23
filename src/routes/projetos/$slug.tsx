@@ -95,7 +95,7 @@ function CaseStudyPage() {
           </ul>
         </Block>
 
-        <Block label="03" title="Frentes de trabalho no SAP">
+        <Block label="03" title={c.frontsLabel}>
           <div className="grid gap-4 sm:grid-cols-2">
             {c.fronts.map((f) => (
               <div key={f.area} className="rounded-lg border border-border bg-surface p-5 shadow-card">

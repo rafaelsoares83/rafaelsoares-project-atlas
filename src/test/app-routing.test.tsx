@@ -22,4 +22,12 @@ describe("App routing", () => {
 
     expect(matches.at(-1)?.routeId).toBe("/projetos/$slug");
   });
+
+  it("matches the CWI case study page", () => {
+    const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
+
+    const matches = router.matchRoutes("/projetos/cwi-automacao-e-integracao");
+
+    expect(matches.at(-1)?.routeId).toBe("/projetos/$slug");
+  });
 });
