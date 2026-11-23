@@ -28,3 +28,8 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+
+- GitHub data is fetched in the browser with `useQuery` (src/lib/github.ts), not in loaders/SSR: GitHub's anonymous rate limit is per IP and shared edge IPs exhaust it.
+- Portfolio owner details (name, GitHub user, role, fallback tagline) live only in src/config/portfolio.ts so they can be changed in one place.
