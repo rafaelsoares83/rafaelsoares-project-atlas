@@ -6,3 +6,5 @@
 - [x] Nome no topo: Rafael Soares
 - [x] Estudo de caso "Reforma Tributária" baseado no currículo
 - [x] Estudo de caso CWI Software (Automação e Integração com TOTVS Protheus)
+- [ ] Publicar o portfólio no ar (para recrutadores)
+- [ ] Colocar o projeto no GitHub (Git sync)
