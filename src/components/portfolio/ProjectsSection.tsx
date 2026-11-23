@@ -41,8 +41,8 @@ export function ProjectsSection({
     <section id="projetos" className="mx-auto max-w-6xl scroll-mt-8 px-6 py-20">
       <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <div>
-          <p className="eyebrow">Trabalhos</p>
-          <h2 className="mt-2 font-display text-4xl font-medium text-foreground">Projetos</h2>
+          <p className="eyebrow">GitHub</p>
+          <h2 className="mt-2 font-display text-4xl font-medium text-foreground">Repositórios</h2>
         </div>
         {repos.length > 0 && (
           <div className="relative w-full md:w-72">
@@ -85,7 +85,7 @@ export function ProjectsSection({
           </Notice>
         ) : repos.length === 0 ? (
           <Notice
-            title="Projetos a caminho"
+            title="Repositórios a caminho"
             text="Os repositórios públicos aparecem aqui automaticamente assim que forem publicados no GitHub."
           >
             <Button asChild variant="outline">

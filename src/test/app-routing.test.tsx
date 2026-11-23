@@ -14,4 +14,12 @@ describe("App routing", () => {
 
     expect(matches.at(-1)?.routeId).not.toBe(rootRouteId);
   });
+
+  it("matches the Reforma Tributária case study page", () => {
+    const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
+
+    const matches = router.matchRoutes("/projetos/reforma-tributaria");
+
+    expect(matches.at(-1)?.routeId).toBe("/projetos/$slug");
+  });
 });

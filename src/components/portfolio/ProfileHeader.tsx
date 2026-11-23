@@ -1,4 +1,4 @@
-import { ArrowUpRight, Github, MapPin } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, MapPin } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -28,11 +28,18 @@ export function ProfileHeader({
       <div className="relative mx-auto max-w-6xl px-6 pb-16 pt-10 md:pb-20">
         <nav className="flex items-center justify-between">
           <span className="font-mono text-sm text-muted-foreground">@{portfolio.githubUser}</span>
-          <Button asChild variant="outline" size="sm">
-            <a href={`https://github.com/${portfolio.githubUser}`} target="_blank" rel="noreferrer">
-              <Github /> GitHub
-            </a>
-          </Button>
+          <div className="flex gap-2">
+            <Button asChild variant="outline" size="sm">
+              <a href={portfolio.linkedin} target="_blank" rel="noreferrer">
+                <Linkedin /> LinkedIn
+              </a>
+            </Button>
+            <Button asChild variant="outline" size="sm">
+              <a href={`https://github.com/${portfolio.githubUser}`} target="_blank" rel="noreferrer">
+                <Github /> GitHub
+              </a>
+            </Button>
+          </div>
         </nav>
 
         <div className="mt-16 grid gap-10 md:mt-24 md:grid-cols-[auto_1fr] md:items-end">
@@ -62,7 +69,7 @@ export function ProfileHeader({
             </p>
             <div className="mt-6 flex flex-wrap items-center gap-3">
               <Button asChild>
-                <a href="#projetos">
+                <a href="#destaques">
                   Ver projetos <ArrowUpRight />
                 </a>
               </Button>

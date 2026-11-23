@@ -33,3 +33,4 @@ use the editor.
 
 - GitHub data is fetched in the browser with `useQuery` (src/lib/github.ts), not in loaders/SSR: GitHub's anonymous rate limit is per IP and shared edge IPs exhaust it.
 - Portfolio owner details (name, GitHub user, role, fallback tagline) live only in src/config/portfolio.ts so they can be changed in one place.
+- Featured case studies are static content in src/content/projects.ts, rendered at /projetos/$slug; adding an entry there adds the card and the page.

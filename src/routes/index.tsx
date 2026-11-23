@@ -2,13 +2,15 @@ import { useQuery } from "@tanstack/react-query";
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo } from "react";
 
+import { FeaturedProjects } from "@/components/portfolio/FeaturedProjects";
 import { ProfileHeader } from "@/components/portfolio/ProfileHeader";
 import { ProjectsSection } from "@/components/portfolio/ProjectsSection";
 import { portfolio } from "@/config/portfolio";
+import { caseStudies } from "@/content/projects";
 import { githubReposQuery, githubUserQuery, languageStats, rankRepos } from "@/lib/github";
 
 const title = `${portfolio.name} — Portfólio de Projetos`;
-const description = `Projetos de tecnologia de ${portfolio.name}, ${portfolio.role.toLowerCase()}, publicados no GitHub.`;
+const description = `Portfólio de ${portfolio.name}, ${portfolio.role}: estudos de caso e projetos de tecnologia.`;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -30,7 +32,6 @@ function Index() {
 
   const repos = useMemo(() => rankRepos(reposQ.data ?? [], portfolio.githubUser), [reposQ.data]);
   const languages = useMemo(() => languageStats(repos), [repos]);
-  const stars = repos.reduce((n, r) => n + r.stargazers_count, 0);
   const loading = reposQ.isPending || userQ.isPending;
 
   return (
@@ -39,12 +40,13 @@ function Index() {
         user={userQ.data}
         loading={userQ.isPending}
         stats={[
-          { label: "Projetos", value: repos.length },
-          { label: "Tecnologias", value: languages.length },
-          { label: "Estrelas", value: stars },
-          { label: "Seguidores", value: userQ.data?.followers ?? 0 },
+          { label: "Projetos", value: caseStudies.length + repos.length },
+          { label: "Empresas", value: 4 },
+          { label: "Anos de experiência", value: 12 },
+          { label: "Cursos e certificações", value: 16 },
         ]}
       />
+      <FeaturedProjects />
       <ProjectsSection
         repos={repos}
         languages={languages}
